@@ -1,0 +1,131 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.page {
+  @include container;
+  padding-top: $spacing-4xl;
+  padding-bottom: $spacing-4xl;
+}
+
+.page-title {
+  @include heading-lg;
+  margin-bottom: $spacing-md;
+}
+
+.page-subtitle {
+  font-size: $font-size-default;
+  color: var(--text-secondary);
+  margin-bottom: $spacing-4xl;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: $spacing-3xl;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  @include card-base;
+  padding: $spacing-3xl;
+  @include flex-column;
+  gap: $spacing-xl;
+}
+
+.service-header {
+  display: flex;
+  gap: $spacing-xl;
+  align-items: flex-start;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.service-info {
+  flex: 1;
+}
+
+.service-name {
+  font-size: $font-size-xl;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: $spacing-xs;
+}
+
+.service-desc {
+  font-size: $font-size-md;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.connected-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-xs $spacing-md;
+  background: $success-light;
+  color: $success-text;
+  border-radius: $border-radius-full;
+  font-size: $font-size-sm;
+  font-weight: 500;
+
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $success;
+  }
+}
+
+.linked-email {
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.service-actions {
+  margin-top: auto;
+}
+
+.btn-connect {
+  @include btn-primary;
+  width: 100%;
+}
+
+.btn-disconnect {
+  @include btn-secondary;
+  width: 100%;
+  color: $danger;
+  border-color: $danger;
+
+  &:hover {
+    background: $danger-light;
+    border-color: $danger;
+  }
+}
+
+.connect-form {
+  @include flex-column;
+  gap: $spacing-md;
+}
+
+.connect-form-actions {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.btn-confirm {
+  @include btn-primary;
+  flex: 1;
+}
+
+.btn-cancel {
+  @include btn-secondary;
+  flex: 1;
+}

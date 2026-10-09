@@ -1,0 +1,112 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.page {
+  @include container;
+  padding-top: $spacing-4xl;
+  padding-bottom: $spacing-4xl;
+  max-width: 640px;
+}
+
+.page-header {
+  margin-bottom: $spacing-4xl;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: $font-size-md;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: $spacing-xl;
+
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+.page-title {
+  @include heading-lg;
+  margin-bottom: 0;
+}
+
+.upload-card {
+  @include card-base;
+  padding: $spacing-4xl;
+  @include flex-column;
+  gap: $spacing-3xl;
+}
+
+.dropzone {
+  @include flex-column-center;
+  gap: $spacing-md;
+  padding: $spacing-5xl;
+  border: 2px dashed var(--border);
+  border-radius: $border-radius-lg;
+  cursor: pointer;
+  transition: $transition;
+  text-align: center;
+
+  &:hover,
+  &.dragging {
+    border-color: $primary;
+    background: $primary-alpha-10;
+  }
+
+  &.has-file {
+    border-style: solid;
+    border-color: $success;
+    background: $success-light;
+  }
+}
+
+.dropzone-icon {
+  font-size: 3rem;
+}
+
+.dropzone-text {
+  font-size: $font-size-default;
+  font-weight: 500;
+  color: var(--text);
+  margin: 0;
+  word-break: break-all;
+}
+
+.dropzone-hint {
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.no-services-msg {
+  font-size: $font-size-md;
+  color: var(--text-secondary);
+  margin: $spacing-md 0 0;
+
+  a {
+    color: $primary;
+    font-weight: 500;
+    margin-left: $spacing-xs;
+  }
+}
+
+.success-alert {
+  padding: $spacing-lg $spacing-xl;
+  background: $success-light;
+  color: $success-text;
+  border: 1px solid $success;
+  border-radius: $border-radius;
+  font-size: $font-size-md;
+}
+
+.error-alert {
+  @include error-alert;
+  margin-bottom: 0;
+}
+
+.btn-upload {
+  @include btn-primary;
+  width: 100%;
+  padding: $spacing-lg;
+  font-size: $font-size-lg;
+}

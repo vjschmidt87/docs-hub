@@ -1,0 +1,182 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.page {
+  @include container;
+  padding-top: $spacing-4xl;
+  padding-bottom: $spacing-4xl;
+}
+
+.page-header {
+  @include flex-between;
+  margin-bottom: $spacing-4xl;
+  flex-wrap: wrap;
+  gap: $spacing-xl;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.page-title {
+  @include heading-lg;
+  margin-bottom: 0;
+}
+
+.btn-upload {
+  @include btn-primary;
+  text-decoration: none;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: $spacing-md;
+  flex-wrap: wrap;
+  margin-bottom: $spacing-4xl;
+}
+
+.filter-tab {
+  padding: $spacing-sm $spacing-xl;
+  border: 1px solid var(--border);
+  border-radius: $border-radius-full;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: $font-size-md;
+  font-weight: 500;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    border-color: $primary;
+    color: $primary;
+  }
+
+  &.active {
+    background: $primary;
+    border-color: $primary;
+    color: $white;
+  }
+}
+
+.empty-state {
+  @include empty-state;
+
+  .empty-icon {
+    font-size: 4rem;
+  }
+}
+
+.btn-primary-link {
+  @include btn-primary;
+  text-decoration: none;
+  margin-top: $spacing-xl;
+}
+
+.documents-grid {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.doc-card {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xl;
+  padding: $spacing-xl $spacing-2xl;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: $border-radius-lg;
+  transition: $transition;
+
+  &:hover {
+    border-color: $primary-light;
+    box-shadow: $shadow-md;
+  }
+
+  @include tablet {
+    flex-wrap: wrap;
+  }
+}
+
+.doc-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.doc-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.doc-name {
+  display: block;
+  font-size: $font-size-default;
+  font-weight: 500;
+  color: var(--text);
+  @include text-truncate;
+  margin-bottom: $spacing-xs;
+}
+
+.doc-meta {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xl;
+  flex-wrap: wrap;
+}
+
+.service-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: $spacing-xs $spacing-md;
+  border-radius: $border-radius-full;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  background: $primary-alpha-10;
+  color: $primary;
+
+  &.service-google_drive { background: rgba($service-google, 0.1); color: $service-google; }
+  &.service-dropbox { background: rgba($service-dropbox, 0.1); color: $service-dropbox; }
+  &.service-onedrive { background: rgba($service-onedrive, 0.1); color: $service-onedrive; }
+  &.service-box { background: rgba($service-box, 0.1); color: $service-box; }
+  &.service-notion { background: rgba($black, 0.08); color: var(--text); }
+  &.service-local { background: rgba($service-local, 0.1); color: $service-local; }
+}
+
+.doc-date,
+.doc-size {
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+}
+
+.doc-actions {
+  display: flex;
+  gap: $spacing-md;
+  flex-shrink: 0;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: $border-radius;
+  background: transparent;
+  cursor: pointer;
+  font-size: $font-size-lg;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    background: var(--hover-bg);
+    border-color: $primary;
+  }
+
+  &.danger:hover {
+    background: $danger-light;
+    border-color: $danger;
+  }
+}

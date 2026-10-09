@@ -1,0 +1,102 @@
+export const PT_BR: Record<string, string> = {
+  // Header
+  'header.logo': 'Docs Hub',
+  'header.documents': 'Documentos',
+  'header.upload': 'Enviar',
+  'header.integrations': 'Integrações',
+  'header.logout': 'Sair',
+  'header.darkMode': 'Modo Escuro',
+  'header.lightMode': 'Modo Claro',
+
+  // Auth
+  'auth.login': 'Entrar',
+  'auth.register': 'Cadastrar',
+  'auth.username': 'Usuário',
+  'auth.email': 'E-mail',
+  'auth.password': 'Senha',
+  'auth.loginBtn': 'Entrar',
+  'auth.registerBtn': 'Criar Conta',
+  'auth.noAccount': 'Não tem uma conta?',
+  'auth.hasAccount': 'Já tem uma conta?',
+  'auth.signUp': 'Cadastre-se',
+  'auth.signIn': 'Entre',
+  'auth.loginTitle': 'Bem-vindo de volta',
+  'auth.loginSubtitle': 'Entre na sua conta do Docs Hub',
+  'auth.registerTitle': 'Crie sua conta',
+  'auth.registerSubtitle': 'Junte-se ao Docs Hub hoje',
+
+  // Documents
+  'documents.title': 'Meus Documentos',
+  'documents.all': 'Todos',
+  'documents.noDocuments': 'Nenhum documento encontrado',
+  'documents.noDocumentsHint': 'Envie um documento ou conecte um serviço de nuvem para começar.',
+  'documents.open': 'Abrir',
+  'documents.download': 'Baixar',
+  'documents.remove': 'Remover',
+  'documents.modified': 'Modificado',
+  'documents.size': 'Tamanho',
+  'documents.service': 'Serviço',
+  'documents.loading': 'Carregando documentos...',
+
+  // Upload
+  'upload.title': 'Enviar Documento',
+  'upload.dropzone': 'Arraste e solte um arquivo aqui, ou clique para selecionar',
+  'upload.dropzoneHint': 'Suporta PDF, DOCX, TXT, XLSX e mais',
+  'upload.destination': 'Salvar em',
+  'upload.noServices': 'Nenhum serviço de nuvem conectado.',
+  'upload.linkService': 'Conectar serviço',
+  'upload.uploadBtn': 'Enviar',
+  'upload.uploading': 'Enviando...',
+  'upload.success': 'Arquivo enviado com sucesso!',
+  'upload.error': 'Falha no envio. Por favor, tente novamente.',
+  'upload.selected': 'Arquivo selecionado',
+  'upload.changeFile': 'Trocar arquivo',
+
+  // Integrations
+  'integrations.title': 'Serviços Conectados',
+  'integrations.subtitle': 'Conecte suas contas de armazenamento em nuvem para navegar e enviar documentos.',
+  'integrations.connect': 'Conectar',
+  'integrations.disconnect': 'Desconectar',
+  'integrations.connected': 'Conectado',
+  'integrations.notConnected': 'Não conectado',
+  'integrations.linkedAs': 'Conectado como',
+  'integrations.googleDrive': 'Google Drive',
+  'integrations.googleDriveDesc': 'Acesse e envie documentos para o Google Drive',
+  'integrations.dropbox': 'Dropbox',
+  'integrations.dropboxDesc': 'Sincronize seus arquivos do Dropbox',
+  'integrations.onedrive': 'OneDrive',
+  'integrations.onedriveDesc': 'Acesse seus arquivos do Microsoft OneDrive',
+  'integrations.box': 'Box',
+  'integrations.boxDesc': 'Conecte seu armazenamento Box',
+  'integrations.notion': 'Notion',
+  'integrations.notionDesc': 'Navegue e envie para seu workspace do Notion',
+  'integrations.enterEmail': 'Digite o e-mail da sua conta para conectar',
+  'integrations.emailPlaceholder': 'seu@email.com',
+  'integrations.cancel': 'Cancelar',
+  'integrations.confirmConnect': 'Conectar Conta',
+
+  // Loading
+  'loading.default': 'Carregando...',
+
+  // Error
+  'error.title': 'Algo deu errado',
+  'error.default': 'Ocorreu um erro inesperado.',
+  'error.tryAgain': 'Tentar Novamente',
+
+  // Footer
+  'footer.text': 'Docs Hub — Projeto de Portfólio',
+
+  // Time
+  'timeAgo.justNow': 'agora mesmo',
+  'timeAgo.ago': 'há {value} {unit}',
+  'timeAgo.year': 'ano',
+  'timeAgo.years': 'anos',
+  'timeAgo.month': 'mês',
+  'timeAgo.months': 'meses',
+  'timeAgo.day': 'dia',
+  'timeAgo.days': 'dias',
+  'timeAgo.hour': 'hora',
+  'timeAgo.hours': 'horas',
+  'timeAgo.minute': 'minuto',
+  'timeAgo.minutes': 'minutos',
+};

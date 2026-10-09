@@ -1,0 +1,102 @@
+export const EN: Record<string, string> = {
+  // Header
+  'header.logo': 'Docs Hub',
+  'header.documents': 'Documents',
+  'header.upload': 'Upload',
+  'header.integrations': 'Integrations',
+  'header.logout': 'Logout',
+  'header.darkMode': 'Dark Mode',
+  'header.lightMode': 'Light Mode',
+
+  // Auth
+  'auth.login': 'Sign In',
+  'auth.register': 'Sign Up',
+  'auth.username': 'Username',
+  'auth.email': 'Email',
+  'auth.password': 'Password',
+  'auth.loginBtn': 'Sign In',
+  'auth.registerBtn': 'Create Account',
+  'auth.noAccount': "Don't have an account?",
+  'auth.hasAccount': 'Already have an account?',
+  'auth.signUp': 'Sign up',
+  'auth.signIn': 'Sign in',
+  'auth.loginTitle': 'Welcome back',
+  'auth.loginSubtitle': 'Sign in to your Docs Hub account',
+  'auth.registerTitle': 'Create your account',
+  'auth.registerSubtitle': 'Join Docs Hub today',
+
+  // Documents
+  'documents.title': 'My Documents',
+  'documents.all': 'All',
+  'documents.noDocuments': 'No documents found',
+  'documents.noDocumentsHint': 'Upload a document or link a cloud service to get started.',
+  'documents.open': 'Open',
+  'documents.download': 'Download',
+  'documents.remove': 'Remove',
+  'documents.modified': 'Modified',
+  'documents.size': 'Size',
+  'documents.service': 'Service',
+  'documents.loading': 'Loading documents...',
+
+  // Upload
+  'upload.title': 'Upload Document',
+  'upload.dropzone': 'Drag & drop a file here, or click to select',
+  'upload.dropzoneHint': 'Supports PDF, DOCX, TXT, XLSX and more',
+  'upload.destination': 'Save to',
+  'upload.noServices': 'No cloud services linked.',
+  'upload.linkService': 'Link a service',
+  'upload.uploadBtn': 'Upload',
+  'upload.uploading': 'Uploading...',
+  'upload.success': 'File uploaded successfully!',
+  'upload.error': 'Upload failed. Please try again.',
+  'upload.selected': 'Selected file',
+  'upload.changeFile': 'Change file',
+
+  // Integrations
+  'integrations.title': 'Connected Services',
+  'integrations.subtitle': 'Link your cloud storage accounts to browse and upload documents.',
+  'integrations.connect': 'Connect',
+  'integrations.disconnect': 'Disconnect',
+  'integrations.connected': 'Connected',
+  'integrations.notConnected': 'Not connected',
+  'integrations.linkedAs': 'Linked as',
+  'integrations.googleDrive': 'Google Drive',
+  'integrations.googleDriveDesc': 'Access and upload documents to Google Drive',
+  'integrations.dropbox': 'Dropbox',
+  'integrations.dropboxDesc': 'Sync your Dropbox files',
+  'integrations.onedrive': 'OneDrive',
+  'integrations.onedriveDesc': 'Access your Microsoft OneDrive files',
+  'integrations.box': 'Box',
+  'integrations.boxDesc': 'Connect your Box cloud storage',
+  'integrations.notion': 'Notion',
+  'integrations.notionDesc': 'Browse and upload to your Notion workspace',
+  'integrations.enterEmail': 'Enter your account email to connect',
+  'integrations.emailPlaceholder': 'your@email.com',
+  'integrations.cancel': 'Cancel',
+  'integrations.confirmConnect': 'Connect Account',
+
+  // Loading
+  'loading.default': 'Loading...',
+
+  // Error
+  'error.title': 'Something went wrong',
+  'error.default': 'An unexpected error occurred.',
+  'error.tryAgain': 'Try Again',
+
+  // Footer
+  'footer.text': 'Docs Hub — Portfolio Project',
+
+  // Time
+  'timeAgo.justNow': 'just now',
+  'timeAgo.ago': '{value} {unit} ago',
+  'timeAgo.year': 'year',
+  'timeAgo.years': 'years',
+  'timeAgo.month': 'month',
+  'timeAgo.months': 'months',
+  'timeAgo.day': 'day',
+  'timeAgo.days': 'days',
+  'timeAgo.hour': 'hour',
+  'timeAgo.hours': 'hours',
+  'timeAgo.minute': 'minute',
+  'timeAgo.minutes': 'minutes',
+};

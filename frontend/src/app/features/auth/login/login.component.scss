@@ -1,0 +1,80 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.auth-page {
+  min-height: calc(100vh - 64px - 60px);
+  @include flex-center;
+  background: var(--bg);
+  padding: $spacing-4xl $spacing-xl;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: $border-radius-xl;
+  padding: $spacing-5xl;
+  box-shadow: $shadow-lg;
+  animation: fadeIn 0.3s ease;
+
+  @include mobile {
+    padding: $spacing-3xl $spacing-2xl;
+  }
+}
+
+.auth-logo {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: $spacing-xl;
+}
+
+.auth-title {
+  font-size: $font-size-3xl;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: $spacing-md;
+}
+
+.auth-subtitle {
+  font-size: $font-size-md;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: $spacing-4xl;
+}
+
+.auth-form {
+  @include flex-column;
+  gap: $spacing-xl;
+}
+
+.error-alert {
+  @include error-alert;
+  margin-bottom: 0;
+}
+
+.btn-submit {
+  @include btn-primary;
+  width: 100%;
+  padding: $spacing-lg;
+  font-size: $font-size-lg;
+  margin-top: $spacing-md;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: $spacing-3xl;
+  font-size: $font-size-md;
+  color: var(--text-secondary);
+
+  a {
+    color: $primary;
+    font-weight: 500;
+    margin-left: $spacing-xs;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

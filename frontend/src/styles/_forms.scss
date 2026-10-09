@@ -1,0 +1,57 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.form-group {
+  @include flex-column;
+  gap: $spacing-md;
+  margin-bottom: $spacing-3xl;
+
+  label {
+    font-size: $font-size-md;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  input,
+  select,
+  textarea {
+    @include form-input-base;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right $spacing-lg center;
+    padding-right: $spacing-4xl;
+  }
+
+  .form-hint {
+    font-size: $font-size-sm;
+    color: var(--text-secondary);
+  }
+
+  .form-error {
+    font-size: $font-size-sm;
+    color: $danger;
+  }
+}
+
+.error-banner {
+  @include error-alert;
+}
+
+.form-actions {
+  @include flex-between;
+  gap: $spacing-xl;
+  margin-top: $spacing-4xl;
+
+  @include mobile {
+    @include flex-column;
+  }
+}

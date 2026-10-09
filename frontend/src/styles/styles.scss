@@ -1,0 +1,90 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'typography';
+@use 'forms';
+@use 'buttons';
+
+// ===== CSS Custom Properties (Theme) =====
+:root {
+  --bg: #{$white};
+  --bg-secondary: #{$gray-50};
+  --text: #{$gray-900};
+  --text-secondary: #{$gray-600};
+  --border: #{$gray-200};
+  --card-bg: #{$white};
+  --header-bg: #{$white};
+  --header-shadow: #{$shadow};
+  --input-bg: #{$white};
+  --hover-bg: #{$gray-50};
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --bg-secondary: #1e293b;
+  --text: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border: #334155;
+  --card-bg: #1e293b;
+  --header-bg: #0f172a;
+  --header-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --input-bg: #1e293b;
+  --hover-bg: #334155;
+}
+
+// ===== Layout =====
+.main-content {
+  min-height: calc(100vh - #{$header-height} - 60px);
+  background-color: var(--bg);
+  padding-top: $spacing-4xl;
+  padding-bottom: $spacing-6xl;
+}
+
+.container {
+  @include container;
+}
+
+.page-header {
+  margin-bottom: $spacing-4xl;
+
+  h1 {
+    @include heading-lg;
+  }
+
+  p {
+    margin-top: $spacing-md;
+    font-size: $font-size-lg;
+    color: var(--text-secondary);
+  }
+}
+
+// ===== Cards =====
+.card {
+  @include card-base;
+  padding: $spacing-3xl;
+}
+
+// ===== Badges =====
+.badge {
+  &-primary { @include badge($primary-alpha-10, $primary); }
+  &-success { @include badge($success-light, $success-text); }
+  &-warning { @include badge($warning-light, $warning-text); }
+  &-danger { @include badge($danger-light, $danger-text); }
+  &-gray { @include badge($gray-100, $gray-600); }
+}
+
+// ===== Utilities =====
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}

@@ -1,0 +1,184 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border);
+  height: $header-height;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  box-shadow: $shadow-sm;
+}
+
+.header-inner {
+  @include flex-between;
+  @include container;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: $font-size-xl;
+  color: var(--text);
+
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+  }
+
+  .logo-icon {
+    font-size: $font-size-2xl;
+  }
+
+  .logo-text {
+    color: $primary;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xl;
+
+  @include tablet {
+    display: none;
+    position: absolute;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: $spacing-xl;
+    gap: $spacing-md;
+    align-items: flex-start;
+
+    &.open {
+      display: flex;
+    }
+  }
+}
+
+.nav-link {
+  font-size: $font-size-md;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: $spacing-md $spacing-lg;
+  border-radius: $border-radius;
+  transition: $transition;
+
+  &:hover {
+    color: $primary;
+    background-color: $primary-alpha-10;
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $primary;
+    background-color: $primary-alpha-10;
+    font-weight: 600;
+  }
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  margin-left: $spacing-xl;
+
+  @include tablet {
+    margin-left: 0;
+    margin-top: $spacing-md;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: $border-radius;
+  background: transparent;
+  cursor: pointer;
+  font-size: $font-size-lg;
+  transition: $transition;
+
+  &:hover {
+    background-color: var(--hover-bg);
+    border-color: $primary;
+  }
+}
+
+.lang-toggle {
+  padding: $spacing-xs $spacing-md;
+  border: 1px solid var(--border);
+  border-radius: $border-radius;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: $font-size-sm;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    border-color: $primary;
+    color: $primary;
+  }
+}
+
+.username {
+  font-size: $font-size-md;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.btn-logout {
+  padding: $spacing-xs $spacing-lg;
+  border: 1px solid $danger;
+  border-radius: $border-radius;
+  background: transparent;
+  color: $danger;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background-color: $danger;
+    color: $white;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: $spacing-md;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: $transition;
+  }
+
+  @include tablet {
+    display: flex;
+  }
+}
